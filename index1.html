@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDN Boarding School Solo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="idn-iconrmv.svg">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("IDN-Boarding-School-Solo.jpg");
+  background-size: cover;
+  filter: blur(5px);
+}
+
+header {
+  position: relative;
+  height: 800px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("IDN-Boarding-School-Solo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-height: 100px;
+  z-index: 2;
+}
+
+nav {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  transition: color 0.1s;
+}
+
+nav a:hover {
+  color: #20a3ce;
+}
+
+.company-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3em;
+  color: #fff;
+}
+
+h1 span {
+  color: #20a3ce;
+}
+
+.address {
+  color: aliceblue;
+  font-weight: 250;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 1em;
+  background: none;
+  color: #ffffff;
+  border: solid 1px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background-color: #20a3ce;
+  transform: scale(1.1);
+}
+
+section h2 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section .container {
+  margin-top: 100px;
+}
+
+section .card {
+  display: flex;
+}
+
+section .card-flex {
+  display: flex;
+}
+
+section .card .text-card {
+  margin: 20px;
+  padding: 50px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+section .text-card {
+  margin: 20px;
+  padding: 50px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 0.5rem;
+}
+
+.box {
+  width: 500px;
+  height: 250px;
+  margin: 20px;
+  padding: 30px;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+#news h2 {
+  margin-top: 100px;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.news-box {
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.news-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.news-box a {
+  text-decoration-line: none;
+  color: #000000;
+}
+
+.news-box a:hover {
+  color: #20a3ce;
+}
+
+.news-box p {
+  font-size: smaller;
+  color: grey;
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: white;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: white ;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: white ;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3  {
+  background: white ;
+}
+
+#contact-us .container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#contact-us h2 {
+  color: white;
+  margin-top: 100px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #20a3ce;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(16, 23, 53);
+}
+  
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="parallax-bg"></div>
+      <div class="overlay"></div>
+      <img class="logo" src="idn-iconrmv.svg" alt="IDN Boarding School Logo" />
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#academic">Academic</a>
+        <a href="#news">News</a>
+        <a href="#achievments">Achievements</a>
+        <a href="#contact-us">Contact Us</a>
+      </nav>
+      <div class="company-name">
+        <h1><span>IDN</span> Boarding School Solo</h1>
+        <p class="address">
+          Tambak, Berjo, Kec. Ngargoyoso, Karanganyar Regency, Solo, Central
+          Java
+        </p>
+        <div class="register-button">
+          <button onclick="location.href='#register'">Register Now</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-content">
+      <div id="profile">
+        <div class="container">
+          <h2 data-aos="fade-down" data-aos-duration="1000">Profile</h2>
+          <div class="card">
+            <div data-aos="fade-down" class="text-card">
+              <h3>Revolution of Knowledge and Comprehension</h3>
+              <p>
+                The IDN Junior High School (SMP) and Vocational High School
+                (SMK) operate under the auspices of the IDN Foundation, guided
+                by the mentorship of Mr. Dedi Gunawan, MT, CCIE. Renowned for
+                its excellence in Information Technology (IT), SMP and SMK IDN
+                align their curriculum with the international demands of the IT
+                industry. Our primary focus is to equip every student,
+                especially those in the SMK level, with skills and
+                certifications essential for thriving in the global arena.
+              </p>
+              <br />
+              <p>
+                Supported by IDN/ID-Network and Imastudio, both of which boast
+                an extensive client base across Asia, Europe, Africa, and the
+                Middle East, SMP and SMK IDN leverage this experience to venture
+                into the realm of education. Our goal is to attract more
+                individuals from Indonesia, preparing them to make a mark on the
+                international stage.
+              </p>
+              <br />
+              <p>
+                Beyond formal education, we integrate "pendidikan diniyah" based
+                on the understanding of the Quran and Sunnah. This approach not
+                only fosters IT competencies but also nurtures the spiritual
+                development of our students. We believe in creating well-rounded
+                individuals who can excel both in the world of technology and in
+                their understanding of ethical principles.
+              </p>
+            </div>
+          </div>
+          <div class="card-flex">
+            <div class="text-card">
+              <h3>Unveiling Meaning</h3>
+              <p>
+                Our logo is inspired by forged iron, striving to become better
+                and more beneficial.
+              </p>
+              <p>Because only steel can forge iron,</p>
+              <p>Only the strong can strengthen the weak</p>
+              <p>Only the great can uplift the small</p>
+              <p>
+                Only the widespread benefits can broaden the benefits of those
+                limited
+              </p>
+              <p>
+                Only the widespread benefits can broaden the benefits of those
+                limited
+              </p>
+            </div>
+            <div class="text-card">
+              <h3>Teaching Team of IDN Middle School-Vocational School</h3>
+              <ul>
+                <li>
+                  Teaching team from Diniyah Teachers of STDI Imam Syafi'i
+                  Jember, LIPIA Jakarta, STAI Assunnah Medan, Sudan University,
+                  and Sunni Boarding Schools in Indonesia.
+                </li>
+                <li>
+                  IT Teaching Team from ID-Networks, CCIE Experts, MTCINE, and
+                  IMAStudio, Google Associate Developers.
+                </li>
+                <li>
+                  English Native Speaker Teaching Team from America, as well as
+                  teachers from English Village Pare Kediri.
+                </li>
+              </ul>
+              <p>Also, other teaching staff and instructors.</p>
+            </div>
+          </div>
+          <div data-aos="fade-right" data-aos-duration="1000" class="text-card">
+            <h3>Vision and Mission</h3>
+            <h5>Vision</h5>
+            <p>To Make Expert Factory</p>
+            <h5>Mission</h5>
+            <p>
+              Printing IT Expert Energy and Printing Advocacy Cadres for
+              goodness in their environment based on the understanding of the
+              Quran and Sunnah in the way of the righteous predecessors.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="academic">
+        <div class="container"></div>
+        <h2 data-aos="fade-down" data-aos-duration="1000">Academic</h2>
+        <div class="row">
+          <div data-aos="fade-right" data-aos-duration="1000" class="box">
+            <h3>Programming</h3>
+            <p>
+              Learn programming language with expert mentors. And obtain
+              national or international certification.
+            </p>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000" class="box">
+            <h3>Networking</h3>
+            <p>
+              Students will delve into networking fields such as MikroTik,
+              Cisco, and Ubiquiti.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div data-aos="fade-right" data-aos-duration="1000" class="box">
+            <h3>Internet of Things</h3>
+            <p>
+              Learn Internet of Things experientially. Students will be guided
+              by expert teachers.
+            </p>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000" class="box">
+            <h3>Tahfidz</h3>
+            <p>
+              The routine Tahfidz program is conducted every day. In addition to
+              excelling in the field of IT, students are knowledgeable and
+              skilled in Quranic recitation.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div data-aos="fade-right" data-aos-duration="1000" class="box">
+            <h3>English</h3>
+            <p>
+              Students will be trained to speak English, so that graduates are
+              expected to be fluent and actively communicate in English.
+            </p>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="1000" class="box">
+            <h3>Religion</h3>
+            <p>
+              The IDN curriculum emphasizes a deep understanding of religion.
+              Students will be equipped with knowledge of religious studies and
+              noble morals.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="news">
+        <h2 data-aos="fade-down" data-aos-duration="1000">Current Tales</h2>
+        <div
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          class="news-container"
+        >
+          <div class="news-box">
+            <img
+              class="news-image"
+              src="polsek-jonggol-idn-boarding-school.png"
+              alt="News Image 1"
+            />
+            <h3>Danger of Narcotics</h3>
+            <a
+              href="https://idn.sch.id/anggota-polsek-jonggol-berikan-wawasan-bahaya-narkoba-kepada-siswa-smp-dan-smk-idn-boarding-school/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Jonggol Police Members Provide Insight into the Dangers of
+              Narcotics to SMP and SMK IDN Boarding School Students</a
+            >
+            <p>August 6, 2023</p>
+          </div>
+
+          <div class="news-box">
+            <img
+              class="news-image"
+              src="347028359_181581064470691_8722638768198956290_n-768x768.jpg"
+              alt="News Image 2"
+            />
+            <h3>Visit to Telkom Company</h3>
+            <a
+              href="https://idn.sch.id/company-visit-ke-pt-telkom-satelit-indonesia-idn-akhwat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Company Visit to PT. Telkom Satelit Indonesia (IDN Akhwat)</a
+            >
+            <p>August 6, 2023</p>
+          </div>
+
+          <div class="news-box">
+            <img
+              class="news-image"
+              src="349095804_254890850391171_4512831712449973822_n-300x300-1.jpg"
+              alt="News Image 3"
+            />
+            <h3>Olympiad</h3>
+            <a
+              href="https://idn.sch.id/para-peraih-medali-di-event-olimpiade-sains-indonesia-hardiknas-di-cabang-olimpiade-bahasa-inggris-tingkat-nasional/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Medal Winners at the Indonesian Science Olympiad Event -
+              HARDIKNAS in the English Olympiad Branch at the National Level</a
+            >
+            <p>August 6, 2023</p>
+          </div>
+          <div class="news-box">
+            <img
+              class="news-image"
+              src="polsek-jonggol-idn-boarding-school.png"
+              alt="News Image 1"
+            />
+            <h3>Danger of Narcotics</h3>
+            <a
+              href="https://idn.sch.id/anggota-polsek-jonggol-berikan-wawasan-bahaya-narkoba-kepada-siswa-smp-dan-smk-idn-boarding-school/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Jonggol Police Members Provide Insight into the Dangers of
+              Narcotics to SMP and SMK IDN Boarding School Students</a
+            >
+            <p>August 6, 2023</p>
+          </div>
+
+          <div class="news-box">
+            <img
+              class="news-image"
+              src="347028359_181581064470691_8722638768198956290_n-768x768.jpg"
+              alt="News Image 2"
+            />
+            <h3>Visit to Telkom Company</h3>
+            <a
+              href="https://idn.sch.id/company-visit-ke-pt-telkom-satelit-indonesia-idn-akhwat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Company Visit to PT. Telkom Satelit Indonesia (IDN Akhwat)</a
+            >
+            <p>August 6, 2023</p>
+          </div>
+
+          <div class="news-box">
+            <img
+              class="news-image"
+              src="349095804_254890850391171_4512831712449973822_n-300x300-1.jpg"
+              alt="News Image 3"
+            />
+            <h3>Olympiad</h3>
+            <a
+              href="https://idn.sch.id/para-peraih-medali-di-event-olimpiade-sains-indonesia-hardiknas-di-cabang-olimpiade-bahasa-inggris-tingkat-nasional/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Medal Winners at the Indonesian Science Olympiad Event -
+              HARDIKNAS in the English Olympiad Branch at the National Level</a
+            >
+            <p>August 6, 2023</p>
+          </div>
+        </div>
+      </div>
+      <div id="achievments">
+         <div  class="container">
+          <h2>Conquests</h2>
+          <div data-aos="zoom-in" data-aos-duration="1000" class="slider">
+            <div class="slides">
+              <input type="radio" name="radio-btn" id="radio1">
+              <input type="radio" name="radio-btn" id="radio2">
+              <input type="radio" name="radio-btn" id="radio3">
+    
+              <div class="slide first">
+                <img src="IMG_0975-1024x768.jpg" alt="a">
+              </div>
+              <div class="slide">
+                <img src="IMG_1015.jpg" alt="b">
+              </div>
+              <div class="slide">
+                <img src="IMG_20160228_151248-1024x759.jpg" alt="c">
+              </div>
+    
+              <div class="navigation-auto">
+                <div class="auto-btn1 "></div>
+                <div class="auto-btn2 "></div>
+                <div class="auto-btn3  "></div>
+              </div>
+              
+            </div>
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+            </div> 
+          </div>
+       </div>
+      </div>
+      <div id="contact-us">
+        <h2>Ask Us Anything</h2>
+        <div data-aos="zoom-in" data-aos-duration="1000" class="container">
+        
+        <form action="process_contact_form.php" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Send</button>
+        </form>
+    </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2023 IDN Boarding School Solo. All rights reserved. | Designed by Hashiifab </p>
+        <div class="social-icons">
+            <a href="http://fb.com/smk.idn" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/smk_idn" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/idnboardingschool" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 3){
+          counter = 1;
+        }
+      }, 5000);
+    </script>
+  </body>
+</html>
