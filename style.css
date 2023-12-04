@@ -110,7 +110,7 @@ h1 span {
   font-weight: 250;
 }
 
-button {
+.we {
   margin-top: 1rem;
   padding: 10px 20px;
   font-size: 1em;
@@ -122,7 +122,7 @@ button {
   border-radius: 0.5rem;
 }
 
-button:hover {
+.we:hover {
   background-color: #20a3ce;
   transform: scale(1.1);
 }
